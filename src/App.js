@@ -36,6 +36,10 @@ function App() {
     setCalcu(eval(calcu).toString());
   }
 
+  const deleteAll = () => {
+    setCalcu("");
+  }
+
   const deleteLast = () => {
     // eslint-disable-next-line eqeqeq
     if (calcu == '') {
@@ -60,6 +64,7 @@ function App() {
           <button onClick={() => updateCalcu('*')}>*</button>
           <button onClick={() => updateCalcu('/')}>/</button>
           <button onClick={deleteLast}>DEL</button>
+          <button onClick={deleteAll}>CLEAR</button>
         </div>
 
         <div className="digits">
